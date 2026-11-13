@@ -14,15 +14,22 @@ messages.push({
 });
 
 // This is the class worker URL. Replace the example subdomain with your class URL.
-const workerUrl = "https://loreal-chatbot.your-subdomain.workers.dev/";
+const workerUrl = "https://lively-hall-d51b.yens537234-cloudflare.workers.dev/";
 
 // Add a message to the chat window on either the user or AI side.
-const displayMessage = (message, className) => {
+const displayMessage = (reply, className) => {
   // Create a div so the message can be styled as a chat bubble.
-  const messageElement = document.createElement("div");
-  messageElement.className = `msg ${className}`;
-  messageElement.textContent = message;
-  chatWindow.appendChild(messageElement);
+  const bubble = document.createElement("div");
+  bubble.className = `msg ${className}`;
+
+  if (className === "ai") {
+    // This Regex finds **bold text** and changes it into a real HTML <strong> element.
+    bubble.innerHTML = reply.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  } else {
+    bubble.textContent = reply;
+  }
+
+  chatWindow.appendChild(bubble);
 
   // Scroll to the newest message.
   chatWindow.scrollTop = chatWindow.scrollHeight;

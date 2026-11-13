@@ -24,9 +24,9 @@ body {
   padding-top: 50px;
 }
 
-.site-header img {
+.logo {
   display: block;
-  width: 150px;
+  max-width: 150px;
   margin: 0 auto 20px;
 }
 
@@ -63,24 +63,32 @@ body {
 }
 
 .msg.user {
-  margin-left: auto;
+  align-self: flex-end;
+  background: #f0f0f0;
   color: #000;
-  background: #eeeeee;
+  padding: 10px 15px;
+  border-radius: 15px 15px 0 15px;
+  margin: 10px 0 10px auto;
+  max-width: 80%;
+  width: fit-content;
 }
 
 .msg.ai {
-  margin-right: auto;
-  color: #666666;
-  background: #fff1f4;
-  border: 1px solid #ffd1dc;
+  align-self: flex-start;
+  background: #fce4e6;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 15px 15px 15px 0;
+  margin: 10px auto 10px 0;
+  max-width: 80%;
+  width: fit-content;
 }
 
 .user-question-display {
-  margin: 6px 0 14px;
-  color: #333;
-  font-size: 16px;
   font-style: italic;
-  font-weight: 700;
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0 8px;
 }
 
 /* input row */
