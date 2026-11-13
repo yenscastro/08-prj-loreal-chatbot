@@ -24,8 +24,14 @@ body {
   padding-top: 50px;
 }
 
+.logo {
+  display: block;
+  max-width: 150px;
+  margin: 0 auto 20px;
+}
+
 .site-title {
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -50,14 +56,39 @@ body {
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
+  padding: 10px 14px;
+  border-radius: 16px;
+  max-width: 80%;
+  overflow-wrap: anywhere;
 }
 
 .msg.user {
+  align-self: flex-end;
+  background: #f0f0f0;
   color: #000;
+  padding: 10px 15px;
+  border-radius: 15px 15px 0 15px;
+  margin: 10px 0 10px auto;
+  max-width: 80%;
+  width: fit-content;
 }
 
 .msg.ai {
-  color: #666666;
+  align-self: flex-start;
+  background: #fce4e6;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 15px 15px 15px 0;
+  margin: 10px auto 10px 0;
+  max-width: 80%;
+  width: fit-content;
+}
+
+.user-question-display {
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0 8px;
 }
 
 /* input row */
@@ -81,7 +112,7 @@ body {
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
+  background: #ff003b;
   color: #fff;
   border: none;
   padding: 12px;
@@ -99,7 +130,7 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #cc0030;
 }
 
 .chat-form button:focus {
