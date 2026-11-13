@@ -24,8 +24,14 @@ body {
   padding-top: 50px;
 }
 
+.site-header img {
+  display: block;
+  width: 150px;
+  margin: 0 auto 20px;
+}
+
 .site-title {
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -50,14 +56,31 @@ body {
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
+  padding: 10px 14px;
+  border-radius: 16px;
+  max-width: 80%;
+  overflow-wrap: anywhere;
 }
 
 .msg.user {
+  margin-left: auto;
   color: #000;
+  background: #eeeeee;
 }
 
 .msg.ai {
+  margin-right: auto;
   color: #666666;
+  background: #fff1f4;
+  border: 1px solid #ffd1dc;
+}
+
+.user-question-display {
+  margin: 6px 0 14px;
+  color: #333;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
 }
 
 /* input row */
@@ -81,7 +104,7 @@ body {
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
+  background: #ff003b;
   color: #fff;
   border: none;
   padding: 12px;
@@ -99,7 +122,7 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #cc0030;
 }
 
 .chat-form button:focus {
